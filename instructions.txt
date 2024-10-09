@@ -1,0 +1,36 @@
+Prerequisites
+Database Access:
+
+Ensure you have the necessary permissions to access the database containing the required tables: calls, reason, and sentiment_statistics.
+SQL Environment:
+
+Use a compatible SQL environment or database management tool that supports the SQL dialect utilized in this code (e.g., ClickHouse, MySQL, PostgreSQL).
+Table Structure:
+
+Confirm that the tables have the following structures:
+calls: Columns include call_id, customer_id, agent_id, call_start_datetime, agent_assigned_datetime, call_end_datetime, and call_transcript.
+reason: Contains call_id and primary_call_reason.
+sentiment_statistics: Contains call_id, agent_id, agent_tone, customer_tone, average_sentiment, and silence_percent_average.
+Steps to Execute the Code
+Open SQL Environment:
+
+Launch your SQL database management tool (e.g., SQL Workbench, pgAdmin, DBeaver) and connect to the database.
+Create a New Query:
+
+Open a new SQL query editor window within your tool.
+Copy and Paste the SQL Code:
+
+Copy the provided SQL code and paste it into the query editor.
+Run the Query:
+
+Execute the query by clicking on the "Run" button or using the appropriate command (usually Ctrl + Enter or F5, depending on the tool).
+View Results:
+
+After execution, review the results displayed in the output pane. The output will show the aggregated call metrics for the top 20 call reasons based on average handle time.
+Analyze Data:
+
+Use the results to identify areas for improvement in call handling efficiency, focusing on the primary call reasons with the highest average handle times.
+Additional Tips
+Adjusting Limits: If you want to see more than 20 results, modify the LIMIT clause to your desired number.
+Further Analysis: Consider exporting the results to a CSV or Excel file for further analysis or reporting purposes.
+Monitoring Changes: Regularly run this query to monitor changes in call metrics over time, helping to assess the effectiveness of any implemented improvements.
